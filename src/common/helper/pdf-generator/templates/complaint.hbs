@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Complaint Report</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16pt;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            vertical-align: top;
+        }
+
+        .label {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="title" style="font-size: 14pt; background-color:#e6e6e6">COMPLAINT REPORT</h2>
+
+    <table>
+        <tr>
+            <td class="label">COMPLAINT NUMBER</td>
+            <td>{{reqdata.complaintNumber}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Department</td>
+            <td>{{reqdata.department}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Date of Complaint</td>
+            <td>{{formatDate reqdata.complaintDate}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Date of Acknowledgement</td>
+            <td>{{formatDate reqdata.acknowledgeDate}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Sample Number/Name</td>
+            <td>{{reqdata.sampleNumber}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Name of the Client</td>
+            <td>{{reqdata.clientName}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Contact Person</td>
+            <td>{{reqdata.contactPerson}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Client Email ID</td>
+            <td>{{reqdata.mailId}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Report No</td>
+            <td>{{reqdata.reportNumber}}</td>
+        </tr>
+
+        <tr>
+            <td class="label">Assigned to</td>
+            <td>{{reqdata.assignedTo.name}}</td>
+        </tr>
+
+        <tr>
+            <td class="label" style="height: 150px">Complaint Action</td>
+            <td style="height: 150px">{{reqdata.correctiveAction}}</td>
+        </tr>
+         <tr>
+            <td class="label" style="height: 200px">Complaint Description</td>
+            <td style="height: 150px">{{reqdata.complaintDescription}}</td>
+        </tr>
+    </table>
+    <div class="row">
+  <span style="font-size: 9pt;">Any Remark:&nbsp;{{reqdata.remark}}</span>
+  </div>
+    <div class="row">
+  <span style="font-size: 9pt;">Complaint Closed On:&nbsp;{{ formatDate reqdata.updatedDate }}</span>
+</div>
+<div class="row" style="margin-top:10px; display:flex;justify-content:space-between;align-items:center">
+<div>
+<img  height="100px" height="100px" ,width="100px">
+<br>
+  <span style="font-size: 9pt;">Signature Complaint In-charge</span></div>
+  <div>
+    <img src="{{complaintInchargeSignature}}" height="100px" ,width="100px"><br>
+  <span style="font-size: 9pt; display: block; text-align: center;">Signature QM</span>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"file":"compliance-config.http.routes.js","sourceRoot":"","sources":["../../src/compliance-config/compliance-config.http.routes.ts"],"names":[],"mappings":";;;AAAa,QAAA,2BAA2B,GAAG,mBAAmB,CAAC;AAElD,QAAA,sBAAsB,GAAG;IACpC,MAAM,EAAE,QAAQ;IAChB,MAAM,EAAE,4BAA4B;IACpC,MAAM,EAAE,KAAK;IACb,QAAQ,EAAE,0BAA0B;IACpC,QAAQ,EAAE,UAAU;IACpB,yCAAyC,EACvC,iEAAiE;CACpE,CAAC"}

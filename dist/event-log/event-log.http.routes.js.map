@@ -1,0 +1,1 @@
+{"version":3,"file":"event-log.http.routes.js","sourceRoot":"","sources":["../../src/event-log/event-log.http.routes.ts"],"names":[],"mappings":";;;AAAa,QAAA,mBAAmB,GAAG,WAAW,CAAC;AAElC,QAAA,cAAc,GAAE;IACzB,MAAM,EAAE,QAAQ;IAChB,MAAM,EAAE,YAAY;IACpB,MAAM,EAAE,KAAK;IACb,QAAQ,EAAE,KAAK;IACf,UAAU,EAAE,eAAe;IAC3B,QAAQ,EAAE,UAAU;CACvB,CAAA"}

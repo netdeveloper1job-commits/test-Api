@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SOP Template</title>
+    <style>
+        body {
+            font-family: 'Aptos', Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .sop-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 2px;
+            vertical-align: top;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 10pt;           
+        }
+        .sopDocHtml{
+            
+        }
+    </style>
+   </head>
+   <body>
+       
+         <table style="width:100%; margin-top:0; border-collapse: collapse; font-size:11px; ">
+          <tr>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Name</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.user.name}}</td>
+             <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.reviewer.name}}</td>
+            <td style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.approver.name}}</td>
+          </tr>
+             <tr>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Designation</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.user.designation}}</td>
+             <td style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.reviewer.designation}}</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.approver.designation}}</td>
+          </tr>
+             <tr>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Action</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Created (Prepared by)</td>
+             <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Reviewed</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Approved</td>
+          </tr>
+             <tr>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">Date</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.createdDate}}</td>
+             <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.reviewedDate}}</td>
+            <td  style="border: 1px solid #ccc; padding: 3px;width:25%">{{reqdata.data.sopDetails.approvedDate}}</td>
+          </tr>
+             <tr>
+              <td style="border: 1px solid #ccc; padding: 3px; height: 60px;">Signature</td>
+            <td style="border: 1px solid #ccc; padding: 3px; height: 60px;object-fit: contain;">
+            <img src="{{userImgSrc}}" style="height: 100px; width:100px;object-fit: contain;">
+             </td>
+             <td style="border: 1px solid #ccc; padding: 3px; height: 60px;object-fit: contain;">
+            <img  src="{{reviewerImgSrc}}" style="height: 100px; width:100px;object-fit: contain;">
+             </td>
+            <td style="border: 1px solid #ccc; padding: 3px; height: 60px;object-fit: contain;">
+             <img src="{{approverImgSrc}}" style="height: 100px; width:100px;object-fit: contain;">
+            </td>
+            </tr>
+        </table>
+
+        <h5 style="margin: top 8px !important;text-decoration:underline">REVISION HISTORY</h5>
+         <table style="width:100%; margin-top:6px; border-collapse: collapse; font-size:11px;; padding-top:4px ">
+          <tr>
+             <td style="border: 1px solid #ccc; padding: 3px;width:15% ">Revision No</td>
+             <td style="border: 1px solid #ccc; padding: 3px;width:20% ">Effective Date </td>
+             <td style="border: 1px solid #ccc; padding: 3px; width:65%">Revision summary</td>
+          </tr>
+           {{#each reqdata.data.eventLogs}}
+            <tr *ngFor="let log of reqdata.data.eventLogs">
+          <td style="border: 1px solid #ccc; padding: 3px; width:15%">{{ version }}</td>
+          <td style="border: 1px solid #ccc; padding: 3px; width:20%">
+            {{formatDate  createdDate }}
+          </td>
+          <td style="border: 1px solid #ccc; padding: 3px; width:65%">{{ description }}</td>
+        </tr>
+          {{/each}}
+         </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <table style="width:100%; margin-top:100px; border-collapse: collapse; font-size:10pt; padding-top:4px ">
+       {{#isEmpty reqdata.data.sopDetails.sopDoc}}
+        <table style="margin-top: 8px; padding:0px ; padding-top:4px ">
+          {{#each reqdata.data.sopDetails.procedures}}
+            <tr>
+              <td colspan="2" style="border: 1px solid #ccc; padding: 4px;">
+                <div class="section-title" style="margin-top: 20px; font-weight: bold;">
+                  {{procedureStep}}
+                </div>
+                <div style="font-size: 10pt">{{{content}}}</div>
+              </td>
+            </tr>
+          {{/each}}
+        </table>
+      
+    {{else}}
+        <div class="section-title" style="margin-top: 10px;">SOP Document</div>
+        <div class="sopDocHtml">
+          {{{sopDocHtml}}}
+        </div>
+    {{/isEmpty}}
+</body>
+</html>

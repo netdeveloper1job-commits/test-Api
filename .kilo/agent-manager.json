@@ -1,0 +1,17 @@
+{
+  "worktrees": {
+    "wt-1776318082821-1": {
+      "branch": "triangular-concavenator",
+      "path": "d:\\complianceHub\\compliance-hub-be\\.kilo\\worktrees\\triangular-concavenator",
+      "parentBranch": "15-apr-vandana",
+      "createdAt": "2026-04-16T05:41:22.821Z",
+      "remote": "origin"
+    }
+  },
+  "sessions": {
+    "ses_26b3108c3ffecDbEE6WUZV5R37": {
+      "worktreeId": "wt-1776318082821-1",
+      "createdAt": "2026-04-16T05:41:25.429Z"
+    }
+  }
+}

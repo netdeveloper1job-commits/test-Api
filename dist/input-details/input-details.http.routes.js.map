@@ -1,0 +1,1 @@
+{"version":3,"file":"input-details.http.routes.js","sourceRoot":"","sources":["../../src/input-details/input-details.http.routes.ts"],"names":[],"mappings":";;;AAAa,QAAA,uBAAuB,GAAG,eAAe,CAAC;AAE1C,QAAA,kBAAkB,GAAG;IAChC,MAAM,EAAE,QAAQ;IAChB,MAAM,EAAE,uBAAuB;IAC/B,MAAM,EAAE,KAAK;IACb,QAAQ,EAAE,qBAAqB;IAC/B,QAAQ,EAAE,UAAU;CACrB,CAAC"}

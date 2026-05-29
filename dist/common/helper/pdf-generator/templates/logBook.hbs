@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Logbook</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: #000;
+      margin: 20px;
+    }
+
+    .outer-box {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+
+    .header-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 6px;
+    }
+
+    .header-table td {
+      border: 1px solid #000;
+      padding: 6px;
+      font-weight: bold;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 8px 8px;
+    }
+
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 6px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 100px;
+    }
+
+    .data-table ,
+    .data-table td {
+      border: 1px solid #000;
+      padding: 5px;
+    }
+
+    .left {
+      text-align: left;
+    }
+    .header-row td {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 12px 8px; /* more space top & bottom */
+      border: 1px solid #000;
+    }
+    .header-row td:first-child {
+      border-right: none;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Main Table -->
+    <table class="data-table">
+        <tr class="data-table" style="background-color:#e6e6e6;font-weight: bold;text-align: center;">
+          <td>S. No</td>
+          <td>Date</td>
+          <td>Start Time</td>
+          <td>End Time</td>
+          <td>Sample ID</td>
+          <td>Sample Name</td>
+          <td>Test Parameter</td>
+          <td>Remark / Deviation</td>
+          <td>Signature User</td>
+          <td>Approved By</td>
+        </tr>
+      </tr>
+      <tbody>
+           {{#each reqdata}}
+        <tr>
+          <td>{{inc @index}}</td>
+          <td>{{formatDate this.createdDate}}</td>
+          <td>{{this.startTime}}</td>
+          <td>{{this.endTime}}</td>
+          <td>{{this.sampleId}}</td>
+          <td>{{this.sampleName}}</td>
+          <td>{{this.testParameters}}</td>
+          <td>{{this.remark}}</td>
+          <td><img src="{{complaintInchargeSignature}}" height="30px" ,width="30px"></td>
+          <td>{{this.approvedBy.name}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"file":"compliance-category.http.routes.js","sourceRoot":"","sources":["../../src/compliance-category/compliance-category.http.routes.ts"],"names":[],"mappings":";;;AAAa,QAAA,6BAA6B,GAAG,qBAAqB,CAAC;AAEtD,QAAA,wBAAwB,GAAG;IACtC,MAAM,EAAE,QAAQ;IAChB,MAAM,EAAE,8BAA8B;IACtC,MAAM,EAAE,KAAK;IACb,QAAQ,EAAE,4BAA4B;IACtC,QAAQ,EAAE,UAAU;IACpB,iCAAiC,EAAE,+CAA+C;CACnF,CAAC"}
